@@ -31,9 +31,10 @@ jobs:
             - name: Build Electron app
               run: npm run transpile:electron
 
-            - name: Build/Release Electron app
-              uses: samuelmeuli/action-electron-builder@v1
+            - name: Build and Release
+              uses: electron-userland/electron-builder-action@v1
               with:
                   github_token: ${{ secrets.github_token }}
                   release: true
                   publish: always
+                  config: electron-builder.yml
