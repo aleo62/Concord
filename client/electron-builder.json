@@ -1,0 +1,15 @@
+{
+    "files": ["dist-electron", "dist-react"],
+    "appId": "com.concord.app",
+    "icon": "public/icon.png",
+    "mac": {
+        "target": "dmg"
+    },
+    "linux": {
+        "target": ["AppImage"],
+        "category": "Messaging"
+    },
+    "win": {
+        "target": ["portable", "msi"]
+    }
+}
