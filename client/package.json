@@ -14,7 +14,10 @@
         "transpile:electron": "tsc --project src/electron/tsconfig.json",
         "dist:mac": "npm run build && npm run transpile:electron && electron-builder --mac --arm64",
         "dist:linux": "npm run build && npm run transpile:electron && electron-builder --linux --x64",
-        "dist:win": "npm run build && npm run transpile:electron && electron-builder --win --x64"
+        "dist:win": "npm run build && npm run transpile:electron && electron-builder --win --x64",
+        "postinstall": "electron-builder install-app-deps",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.1.7",
